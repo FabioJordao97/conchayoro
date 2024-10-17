@@ -1,6 +1,6 @@
 name: jobs examples
 on:
-  worflow_dispatch
+  workflow_dispatch
   
 jobs:
   build:
