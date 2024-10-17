@@ -1,6 +1,6 @@
 name: jobs examples
 on:
-  push
+  worflow_dispatch
   
 jobs:
   build:
