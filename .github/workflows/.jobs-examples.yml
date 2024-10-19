@@ -25,9 +25,9 @@ jobs:
       - name: use of artifact created
         run: ls build-result.txt
     approval:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Esperar Aprovação
-        run: echo "Aguardando aprovação..."
-        if: github.event_name == 'workflow_dispatch'
+      runs-on: ubuntu-latest
+      needs: build
+      steps:
+        - name: Esperar Aprovação
+          run: echo "Aguardando aprovação..."
+          if: github.event_name == 'workflow_dispatch'

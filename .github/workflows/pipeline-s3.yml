@@ -41,5 +41,5 @@ jobs:
       needs: build
       steps:
         - name: Esperar Aprovação
-            run: echo "Aguardando aprovação..."
-              if: github.event_name == 'workflow_dispatch'
+          run: echo "Aguardando aprovação..."
+          if: github.event_name == 'workflow_dispatch'
