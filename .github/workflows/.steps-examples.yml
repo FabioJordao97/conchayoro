@@ -16,3 +16,6 @@ jobs:
           the-caller: 'Myself'
       - run: echo random-number ${{ steps.step-caller.outputs.random-number }}
         shell: bash
+        - name: Esperar Aprovação
+        run: echo "Aguardando aprovação..."
+        if: github.event_name == 'workflow_dispatch'

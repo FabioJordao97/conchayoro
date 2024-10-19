@@ -24,3 +24,6 @@ jobs:
           path: build-result.txt
       - name: use of artifact created
         run: ls build-result.txt
+        - name: Esperar Aprovação
+        run: echo "Aguardando aprovação..."
+        if: github.event_name == 'workflow_dispatch'

@@ -8,3 +8,6 @@ jobs:
     steps:
       - name: executa comando
         run: echo "Configuração inicial do pipeline"
+        - name: Esperar Aprovação
+        run: echo "Aguardando aprovação..."
+        if: github.event_name == 'workflow_dispatch'
